@@ -288,11 +288,6 @@ img {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#modalAttackedImage {
-    max-width: 50vh;
-    width: 100%;
-}
-
 .modal {
     display: none;
     position: fixed;
