@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of Clans陣型</title>
+    <link rel="stylesheet" href="main/styles.css">
+    <script type="module" src="main/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs-container">
+            <div class="tabs">
+                <div id="tabBases" class="tab active">Bases</div>
+                <div id="tabUpload" class="tab">Upload</div>
+            </div>
+        </div>
+        <div class="tab-contents">
+            <div id="BasesTab" class="tab-content active">
+                <div class="flex-table">
+                    <table id="select_table">
+                        <tr>
+                            <td colspan="4"><div class="custom-select"><select id="select_base"></select></div></td>
+                        </tr>
+                        <tr>
+                            <td id="select_td"><h1>盃段:</h1></td>
+                            <td><div class="custom-select"><select id="select_cup1"></select></div></td>
+                            <td><h1>~</h1></td>
+                            <td><div class="custom-select"><select id="select_cup2"></select></div></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <h1>Bases</h1>
+                <div class="baseTable"><table id="table_base"></table></div>
+            </div>
+            <div id="UploadTab" class="tab-content">
+                <h1>Upload Base Image and Link</h1>
+                <label for="imageUpload" class="custom-file-upload">
+                    Choose the base image
+                </label>
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                <input type="text" id="linkInput" placeholder="Enter COC base link...">
+                <button id="btnUpload">Upload</button>
+                <div id="displayArea" class="img_display"></div>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header" id="close">
+                    x
+                </div>
+                <div class="modal-body">
+                    <div class="tabs-container">
+                        <div class="tabs">
+                            <div id="tabOverAll" class="modal-tab active">OverAll</div>
+                            <div id="tabDetail" class="modal-tab">Detail</div>
+                        </div>
+                    </div>
+                    <div id="OverAllTab" class="modal-tab-content active">
+                        <div class="modal-fixed">
+                            <img id="modalImage" src="" alt="">
+                        </div>
+                        <div class="modal-fixed">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th><img src="Star3.png" class="istar"></th>
+                                        <th><img src="Star2.png" class="istar"></th>
+                                        <th><img src="Star1.png" class="istar"></th>
+                                        <th><img src="Star0.png" class="istar"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><label id="lStar3" class="lstar"></label></td>
+                                        <td><label id="lStar2" class="lstar"></label></td>
+                                        <td><label id="lStar1" class="lstar"></label></td>
+                                        <td><label id="lStar0" class="lstar"></label></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button id="modal-LK">Open Link</button>
+                    </div>
+                    <div id="DetailTab" class="modal-tab-content">
+                        <div class="flex-table">
+                            <table>
+                                <tr><td colspan="2"><div class="modal-sub" id="modal-add">新增資料</div></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td class="r_label">Name</td><td><input id="name_r" class="r"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td class="r_label">日期</td><td><input type="date" id="date_r" class="r"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td class="r_label">結算盃數</td><td><input type="number" id="cup_r" class="r"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td><img src="Star3.png" class="r_label"></td><td><input type="number" id="lStar3_r" class="r"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td><img src="Star2.png" class="r_label"></td><td><input type="number" id="lStar2_r" class="r"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td><img src="Star1.png" class="r_label"></td><td><input type="number" id="lStar1_r" class="r"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td><img src="Star0.png" class="r_label"></td><td><input type="number" id="lStar0_r" class="r"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td class="r_label">防守圖</td><td><input type="file" id="attackedImg" class="r" accept="image/*"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td colspan="2"><div id="attacked_img_display" class="attacked-img"></div></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td colspan="2"><button id="modal-add-record">送出</button></td></tr>
+                            </table>
+                        </div>
+                        <div class="flex-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>日期</th>
+                                        <th>盃數</th>
+                                        <th id="th_3star"><img src="Star3.png"></th>
+                                        <th id="th_2star"><img src="Star2.png"></th>
+                                        <th id="th_1star"><img src="Star1.png"></th>
+                                        <th id="th_0star"><img src="Star0.png"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="history_body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal_attacked" class="modal-attacked">
+            <div class="modal-content">
+                <div class="modal-header" id="close_attacked">
+                    x
+                </div>
+                <div class="modal-body">
+                    <div class="modal-fixed">
+                        <img id="modalAttackedImage" src="" alt="">
+                    </div>
+                    <div class="modal-fixed">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>日期</th>
+                                    <th>盃數</th>
+                                    <th><img src="Star3.png" class="istar"></th>
+                                    <th><img src="Star2.png" class="istar"></th>
+                                    <th><img src="Star1.png" class="istar"></th>
+                                    <th><img src="Star0.png" class="istar"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="attackedName" class="history_content"></td>
+                                    <td id="attackedDate" class="history_content"></td>
+                                    <td id="attackedFinalCup" class="history_content"></td>
+                                    <td class="history_content"><label id="lStar3_attcked"></label></td>
+                                    <td class="history_content"><label id="lStar2_attcked" ></label></td>
+                                    <td class="history_content"><label id="lStar1_attcked"></label></td>
+                                    <td class="history_content"><label id="lStar0_attcked"></label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
