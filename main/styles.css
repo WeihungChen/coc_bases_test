@@ -23,7 +23,6 @@ body {
 .tabs-container {
     display: flex;
     justify-content: center; /* 居中显示选项卡 */
-    margin-bottom: 20px; /* Add some bottom margin */
 }
 
 .tabs {
@@ -55,7 +54,7 @@ body {
 
 .tab-content {
     position: relative;
-    padding: 20px;
+    padding: 0;
     display: none;
     justify-content: center;
     align-items: center;
@@ -179,10 +178,6 @@ th {
     border-radius: 5px;
     max-height: 30px;
     max-width: 50px;
-}
-
-td {
-    padding-top: 3px;
 }
 
 .history_content {
