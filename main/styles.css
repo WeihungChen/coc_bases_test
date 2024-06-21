@@ -157,7 +157,13 @@ button:hover {
     max-height: 80vh;
     height: 80%;
     width: 95%;
+    display: block;
     overflow: auto;
+}
+
+#table_base {
+    height: 90%;
+    max-height: 70vh;
 }
 
 table {
