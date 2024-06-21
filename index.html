@@ -20,18 +20,20 @@
                 <div class="flex-table">
                     <table id="select_table">
                         <tr>
-                            <td colspan="4"><div class="custom-select"><select id="select_base"></select></div></td>
+                            <td colspan="4"><div class="custom-select"><select id="select_base" style="background-color: rgba(114, 170, 255, 0.2)"></select></div></td>
                         </tr>
+                        <tr><td colspan="4" style="color:white">_</td></tr>
+                        <tr><td id="select_td" colspan="4"><label class="label1">盃段</label></td></tr>
                         <tr>
-                            <td id="select_td"><h2>盃段:</h2></td>
-                            <td><div class="custom-select"><select id="select_cup1"></select></div></td>
+                            <td><div class="custom-select"><select id="select_cup1" style="background-color: rgba(114, 255, 255,0.2)"></select></div></td>
                             <td><h1>~</h1></td>
-                            <td><div class="custom-select"><select id="select_cup2"></select></div></td>
+                            <td><div class="custom-select"><select id="select_cup2" style="background-color: rgba(114, 255, 255,0.2)"></select></div></td>
                         </tr>
+                        <tr><td colspan="4"><label class="label1">Bases</label></td></tr>
                     </table>
                 </div>
                 
-                <h1>Bases</h1>
+                
                 <div class="baseTable"><table id="table_base"></table></div>
             </div>
             <div id="UploadTab" class="tab-content">
@@ -89,7 +91,7 @@
                                 <tr><td colspan="2"><div class="modal-sub" id="modal-add">新增資料</div></td></tr>
                                 <tr class="modal-add-items" style="display: none"><td class="r_label">Name</td><td><input id="name_r" class="r"></td></tr>
                                 <tr class="modal-add-items" style="display: none"><td class="r_label">日期</td><td><input type="date" id="date_r" class="r"></td></tr>
-                                <tr class="modal-add-items" style="display: none"><td class="r_label">結算盃數</td><td><input type="number" id="cup_r" class="r"></td></tr>
+                                <tr class="modal-add-items" style="display: none"><td class="r_label">配對盃數</td><td><input type="number" id="cup_r" class="r"></td></tr>
                                 <tr class="modal-add-items" style="display: none"><td><img src="Star3.png" class="r_label"></td><td><input type="number" id="lStar3_r" class="r"></td></tr>
                                 <tr class="modal-add-items" style="display: none"><td><img src="Star2.png" class="r_label"></td><td><input type="number" id="lStar2_r" class="r"></td></tr>
                                 <tr class="modal-add-items" style="display: none"><td><img src="Star1.png" class="r_label"></td><td><input type="number" id="lStar1_r" class="r"></td></tr>

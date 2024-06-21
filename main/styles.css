@@ -98,9 +98,14 @@ h1 {
     color: #333333;
 }
 
-h2 {
-    margin-top: 1;
-    color: #333333;
+select {
+    padding: 0;
+    border: 0;
+}
+
+.label1 {
+    font-size: 26px;
+    font-weight: bold;
 }
 
 input[type="file"], input[type="text"], button {
@@ -171,7 +176,7 @@ th {
 }
 
 td {
-    padding: 10px;
+    padding-top: 3px;
 }
 
 .history_content {
@@ -211,7 +216,7 @@ img {
     border-radius: 8px;
     appearance: none; /* Remove default arrow */
     -webkit-appearance: none; /* Remove default arrow for Safari */
-    background-color: #f0f0f0;
+    background-color: inherit;
     cursor: pointer;
 }
 
