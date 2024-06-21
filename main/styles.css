@@ -98,6 +98,11 @@ h1 {
     color: #333333;
 }
 
+h2 {
+    margin-top: 1;
+    color: #333333;
+}
+
 input[type="file"], input[type="text"], button {
     margin: 10px 0;
     padding: 12px;
