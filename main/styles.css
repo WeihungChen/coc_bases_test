@@ -359,22 +359,24 @@ img {
 }
 
 .r_label {
-    width: 150px;
-    font-size: 20px;
+    width: 105px;
+    font-size: 16px;
     border-radius: 10px;
     background-color: rgba(143, 199, 255, 0.3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .r {
-    font-size: 20px;
-    width: 300px;
+    font-size: 16px;
+    width: 150px;
+    min-width: 105px;
+    max-width: 200px;
     border-radius: 10px;
     text-align: center;
 }
 
 .modal-sub {
-    width: 465px;
+    width: 305px;
     height: 40px;
     background-color: #007bff;
     color: white;
@@ -384,7 +386,8 @@ img {
 }
 
 #modal-add-record {
-    width: 465px;
+    width: 100%;
+    min-width: 305px;
 }
 
 .flex-table {
@@ -393,7 +396,7 @@ img {
     justify-content: center;
     display: flex;
     margin-bottom: 10px;
-    width: 90%;
+    width: 100%;
 }
 
 .attacked-img {
