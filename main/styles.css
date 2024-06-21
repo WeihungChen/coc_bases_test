@@ -146,6 +146,7 @@ button:hover {
 .baseTable {
     max-height: 80vh;
     height: 80%;
+    width: 95%;
     overflow: auto;
 }
 
