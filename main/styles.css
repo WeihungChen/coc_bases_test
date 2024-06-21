@@ -185,7 +185,7 @@ img {
 }
 
 #select_table {
-    width: 50vh;
+    width: 100%;
 }
 
 .custom-select {
@@ -377,6 +377,7 @@ img {
     justify-content: center;
     display: flex;
     margin-bottom: 10px;
+    width: 90%;
 }
 
 .attacked-img {
