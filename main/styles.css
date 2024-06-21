@@ -289,7 +289,8 @@ img {
 }
 
 #modalAttackedImage {
-    max-width: 60vh;
+    max-width: 50vh;
+    width: 100%;
 }
 
 .modal {
